@@ -7,7 +7,7 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const debug = false;
 const config = require('./config.json');
-const prefix = config.prefix;
+const { prefix, serverID } = require('./config.json');
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
@@ -20,6 +20,9 @@ const owner = process.env.ownerID;
 
 client.once('ready', () => {
 	console.log('Ready');
+	client.guilds.fetch(serverID)
+	.then(guild => client.user.setActivity(guild.memberCount + ' Shedizens!', {type: "WATCHING"}))
+	.catch(console.error);
 });
 
 client.login(process.env.TOKEN);
