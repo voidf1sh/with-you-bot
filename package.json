@@ -1,0 +1,25 @@
+{
+  "name": "with-you-bot",
+  "version": "1.0.0",
+  "description": "Together. Forever. We Are With You.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voidf1sh/with-you-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voidf1sh/with-you-bot/issues"
+  },
+  "homepage": "https://github.com/voidf1sh/with-you-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
